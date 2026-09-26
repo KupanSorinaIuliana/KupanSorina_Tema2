@@ -1,6 +1,6 @@
 # Project overview
 
-This project contains a small Python agent scaffold with:
+This project contains a QA agent built using the following standards:
 
 - a prompt registry that loads YAML templates from the `prompts` folder
 - a tool registry and wrapper for callable tools
@@ -11,38 +11,17 @@ This project contains a small Python agent scaffold with:
 - `agent.py` – conversational agent wrapper
 - `prompts/` – YAML prompt templates and registry loader
 - `tools/` – tool definitions, parameter schemas, and registry
-
-## Quick usage
-
-```python
-from tools import ToolWrapper
-
-print(ToolWrapper.call("calculator", {"expression": "2 + 3 * 4"}))
-print(ToolWrapper.call("get_datetime", {"query": "Bucharest"}))
-```
-
-```python
-from prompts import PromptRegistry
-
-registry = PromptRegistry("prompts")
-print(registry.render("ask_analyst", rol="expert", domeniu="programming", max_cuvinte=50))
-```
-
-## Notes
-
-- The tool calculator uses a restricted safe evaluator instead of raw `eval`.
-- The prompt registry reads all `.yaml` files in the `prompts` directory and renders Jinja2 templates.
-
+- `docker-compose.yml` – local container stack that starts the LiteLLM proxy and any supporting services
+- `litellm-config.yaml` – LiteLLM configuration for routing requests to the local Ollama model backend
 
 ## Project setup
 
-- Run the following command in the terminal:
-    python -m pip install langchain-openai jinja2 pyyaml pydantic httpx
+- Install the needed imports if they are not already installed.
 - Start docker:
     docker compose up -d
 - Check that LiteLLM is alive:
     curl http://localhost:4000/health/liveliness
-- Pull the model you need from the terminal:
-    ollama pull qwen2.5:3b
+- Pull the model you need from the terminal (the model can be changed in the agent.py file):
+    ollama pull llama3.2:3b
 - Run the agent:
     python agent.py

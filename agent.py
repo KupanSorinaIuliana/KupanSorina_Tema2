@@ -1,4 +1,4 @@
-# QA agent / orchestrare LLM
+# QA agent / LLM orchestrator with tool execution and prompt management.
 from __future__ import annotations
 import asyncio
 import httpx
