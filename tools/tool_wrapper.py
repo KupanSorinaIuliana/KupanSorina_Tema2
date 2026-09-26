@@ -1,4 +1,5 @@
 # ToolWrapper.call() + ToolWrapper.catalog()
+import json
 from tools.registry import TOOL_REGISTRY
 
 # For the agent to execute the chosen tool
@@ -19,7 +20,10 @@ class ToolWrapper:
 
         # Execute + Return
         try:
-            return str(tool["func"](params))
+            result = tool["func"](params)
+            if isinstance(result, (dict, list, tuple, set)):
+                return json.dumps(result, ensure_ascii=False, indent=2)
+            return str(result)
         except Exception as e:
             return f"Eroare execuție '{name}': {e}"
 

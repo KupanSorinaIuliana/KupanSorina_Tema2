@@ -1,6 +1,7 @@
 # QA agent / LLM orchestrator with tool execution and prompt management.
 from __future__ import annotations
 import asyncio
+import json
 import httpx
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage, ToolMessage
@@ -41,9 +42,9 @@ class QAAgent:
         self.history.append(AIMessage(content=answer))
         return answer
     
-    async def react_loop(self, llm, mesaje: list, max_iterations: int = 5) -> str:
+    async def react_loop(self, llm, mesaje: list) -> str:
         """ Loop Think → Act → Observe. """
-        for _ in range(max_iterations):
+        for _ in range(self.max_iterations):
             raspuns = await llm.ainvoke(mesaje)
             mesaje.append(raspuns)
 
@@ -67,17 +68,49 @@ class QAAgent:
         tasks = [self.execute_tool_async(tc) for tc in tool_calls]
         return await asyncio.gather(*tasks)
     
-    async def execute_tool_async(self, tool_call: dict) -> dict:
-        """Execute a single tool call asynchronously and return the result."""
-        name = tool_call.get("name") or tool_call.get("function", {}).get("name")
-        args = tool_call.get("args") or tool_call.get("arguments") or {}
-        call_id = tool_call.get("id") or tool_call.get("call_id")
+    @staticmethod
+    def _normalize_tool_call(tool_call: dict) -> tuple[str, dict, str | None]:
+        """Normalize tool call payloads across different provider formats."""
+        if not isinstance(tool_call, dict):
+            raise ValueError(f"Invalid tool call payload: {tool_call!r}")
 
+        name = tool_call.get("name") or tool_call.get("function", {}).get("name")
         if not name:
             raise ValueError(f"Tool call without name: {tool_call!r}")
 
-        rezultat = await asyncio.to_thread(ToolWrapper.call, name, args)
-        return {"tool_call_id": call_id, "name": name, "content": str(rezultat)}
+        raw_args = tool_call.get("args")
+        if raw_args is None:
+            raw_args = tool_call.get("arguments", {})
+
+        if isinstance(raw_args, str):
+            try:
+                parsed_args = json.loads(raw_args)
+            except json.JSONDecodeError:
+                parsed_args = {"value": raw_args}
+            raw_args = parsed_args
+
+        if not isinstance(raw_args, dict):
+            raw_args = {"value": raw_args}
+
+        call_id = tool_call.get("id") or tool_call.get("call_id")
+        return name, raw_args, call_id
+
+    async def execute_tool_async(self, tool_call: dict) -> dict:
+        """Execute a single tool call asynchronously and return the result."""
+        try:
+            name, args, call_id = self._normalize_tool_call(tool_call)
+        except ValueError as exc:
+            return {"tool_call_id": None, "name": "unknown", "content": str(exc)}
+
+        try:
+            rezultat = await asyncio.to_thread(ToolWrapper.call, name, args)
+            return {"tool_call_id": call_id, "name": name, "content": str(rezultat)}
+        except Exception as exc:
+            return {
+                "tool_call_id": call_id,
+                "name": name,
+                "content": f"Eroare execuție '{name}': {exc}",
+            }
 
     def _build_messages(self, message: str) -> list[BaseMessage]:
         """Build the message list for the LLM, including system prompt and history."""

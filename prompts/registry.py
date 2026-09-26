@@ -57,6 +57,19 @@ class PromptRegistry:
         return best_name
 
     def render(self, name: str, **variabile) -> str:
-        """Render the selected prompt template with the provided variables."""
-        template = self._templates[name]
-        return Template(template.prompt).render(**variabile)
+        """Render a prompt template with safe fallback for missing names."""
+        template = self._templates.get(name)
+        if template is None:
+            fallback_name = "ask_analyst"
+            template = self._templates.get(fallback_name)
+
+        if template is None:
+            raise KeyError(f"Prompt '{name}' was not found and no fallback prompt is available.")
+
+        try:
+            return Template(template.prompt).render(**variabile)
+        except Exception as exc:
+            return (
+                f"Prompt rendering failed for '{name}': {exc}. "
+                "Please check the YAML template variables."
+            )
