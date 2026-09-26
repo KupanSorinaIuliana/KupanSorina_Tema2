@@ -1,0 +1,77 @@
+# LiteLLM Configuration - Local Models via Ollama
+#
+# All models accessible via OpenAI-compatible API at http://localhost:4000
+#
+# Usage from code:
+#   client = openai.OpenAI(base_url="http://localhost:4000/v1", api_key="local")
+#   response = client.chat.completions.create(model="qwen", messages=[...])
+
+model_list:
+  # ============================================
+  # Small models (2-3B) - Fast on CPU
+  # ============================================
+  - model_name: qwen           # Alias for easy access
+    litellm_params:
+      model: ollama/qwen2.5:3b
+      api_base: http://ollama:11434
+
+  - model_name: gemma
+    litellm_params:
+      model: ollama/gemma2:2b
+      api_base: http://ollama:11434
+
+  - model_name: llama
+    litellm_params:
+      model: ollama/llama3.2:3b
+      api_base: http://ollama:11434
+
+  - model_name: mistral                                                                                                                                           
+    litellm_params:                                                                                                                                               
+      model: ollama/mistral:7b                                                                                                                                    
+      api_base: http://ollama:11434 
+
+  - model_name: phi                                                                                                                                           
+    litellm_params:                                                                                                                                               
+      model: ollama/phi3:3.8b                                                                                                                                   
+      api_base: http://ollama:11434 
+
+  - model_name: gemini
+    litellm_params:
+      model: gemini/gemini-2.5-flash
+      api_key: os.environ/GEMINI_API_KEY
+
+  # ============================================
+  # Full model names (for explicit selection)
+  # ============================================
+  - model_name: qwen2.5:3b
+    litellm_params:
+      model: ollama/qwen2.5:3b
+      api_base: http://ollama:11434
+
+  - model_name: gemma2:2b
+    litellm_params:
+      model: ollama/gemma2:2b
+      api_base: http://ollama:11434
+
+  - model_name: llama3.2:3b
+    litellm_params:
+      model: ollama/llama3.2:3b
+      api_base: http://ollama:11434
+
+  - model_name: mistral:7b                                                                                                                                         
+    litellm_params:                                                                                                                                               
+      model: ollama/mistral:7b                                                                                                                                    
+      api_base: http://ollama:11434 
+
+  - model_name: phi3:3.8b                                                                                                                                           
+    litellm_params:                                                                                                                                               
+      model: ollama/phi3:3.8b                                                                                                                                   
+      api_base: http://ollama:11434 
+      
+# General settings
+litellm_settings:
+  drop_params: true        # Ignore unsupported params
+  set_verbose: false       # Set to true for debugging
+
+general_settings:
+  master_key: null         # No auth required for local dev

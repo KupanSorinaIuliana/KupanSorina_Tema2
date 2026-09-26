@@ -1,0 +1,96 @@
+# SkillLab - Shared Infrastructure
+#
+# Start once, use in all lessons:
+#   docker-compose up -d
+#
+# Then run any lesson's webapp - they'll connect to these services.
+
+services:
+  # ============================================
+  # Ollama - Local LLM runtime
+  # ============================================
+  ollama:
+    image: ollama/ollama:latest
+    container_name: skillab-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ============================================
+  # Ollama Init - Pre-pull models on first start
+  # ============================================
+  ollama-init:
+    image: curlimages/curl:latest
+    container_name: skillab-ollama-init
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        echo "Pulling models..."
+        for model in qwen2.5:3b gemma2:2b llama3.2:3b mistral:7b phi3:3.8b; do
+          echo "Pulling $$model..."
+          curl -s http://ollama:11434/api/pull -d "{\"name\": \"$$model\"}" > /dev/null
+        done
+        echo "All models ready!"
+    depends_on:
+      ollama:
+        condition: service_healthy
+
+  # ============================================
+  # LiteLLM Proxy - Unified API for local models
+  # ============================================
+  # Access at http://localhost:4000
+  # OpenAI-compatible API
+  litellm:
+    image: ghcr.io/berriai/litellm:main-latest
+    container_name: skillab-litellm
+    ports:
+      - "4000:4000"
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - ./litellm-config.yaml:/app/config.yaml
+    command: ["--config", "/app/config.yaml", "--port", "4000"]
+    depends_on:
+      ollama-init:
+        condition: service_completed_successfully
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ============================================
+  # PostgreSQL - Database for RAG and storage
+  # ============================================
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: skillab-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-skillab}
+      POSTGRES_USER: ${POSTGRES_USER:-skillab}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-skillab_dev}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U skillab -d skillab"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  ollama_data:
+    name: skillab-ollama-data
+  postgres_data:
+    name: skillab-postgres-data
