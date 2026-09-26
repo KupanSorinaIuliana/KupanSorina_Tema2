@@ -1,9 +1,4 @@
-# SkillLab - Shared Infrastructure
-#
-# Start once, use in all lessons:
 #   docker-compose up -d
-#
-# Then run any lesson's webapp - they'll connect to these services.
 
 services:
   # ============================================

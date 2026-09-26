@@ -1,5 +1,6 @@
-from dataclasses import dataclass
+# Prompt template data class for storing prompt information.
 
+from dataclasses import dataclass
 
 @dataclass
 class PromptTemplate:

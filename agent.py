@@ -11,7 +11,7 @@ from tools.tool_wrapper import ToolWrapper
 BASE_URL = "http://localhost:4000"
 MODEL = "llama3.2"
 INITIAL_SYSTEM_PROMPT = (
-    "You are a helpful assistant for a law firm. Use tools when needed."
+    "You are a helpful assistant for a law contract firm. Use tools when needed."
 )
 
 def build_llm() -> BaseChatModel:

@@ -35,11 +35,6 @@ model_list:
       model: ollama/phi3:3.8b                                                                                                                                   
       api_base: http://ollama:11434 
 
-  - model_name: gemini
-    litellm_params:
-      model: gemini/gemini-2.5-flash
-      api_key: os.environ/GEMINI_API_KEY
-
   # ============================================
   # Full model names (for explicit selection)
   # ============================================

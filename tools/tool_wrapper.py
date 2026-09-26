@@ -1,7 +1,6 @@
 # ToolWrapper.call() + ToolWrapper.catalog()
 from tools.registry import TOOL_REGISTRY
 
-
 # For the agent to execute the chosen tool
 class ToolWrapper:
     @staticmethod
@@ -12,7 +11,7 @@ class ToolWrapper:
 
         tool = TOOL_REGISTRY[name]
 
-        # Validate — Pydantic verifică tipuri și constrângeri
+        # Validate — Pydantic verifies types and constraints
         try:
             params = tool["params_model"](**args)
         except Exception as e:

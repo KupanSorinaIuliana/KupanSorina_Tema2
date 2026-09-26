@@ -13,8 +13,7 @@ from ddgs import DDGS
     Search the web and return relevant results with title, URL, and description.
     Usage examples:
     "search for the latest news on contract law"
-    "find information about the Eiffel Tower"
-
+    "find information about the sales contract template of a car"
     """,
 )
 def web_search(params: WebSearchParams) -> str:

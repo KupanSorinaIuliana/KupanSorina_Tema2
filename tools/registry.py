@@ -1,10 +1,8 @@
 # TOOL_REGISTRY + register_tool
-## here we register the tools and handle them
 from typing import Any, Callable
-
 from pydantic import BaseModel
 
-# Registry global pentru tool-uri
+# Registry global for the tools, mapping tool names to their metadata and parameter models.
 TOOL_REGISTRY: dict[str, dict[str, Any]] = {}
 
 

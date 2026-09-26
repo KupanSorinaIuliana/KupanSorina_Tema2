@@ -1,19 +1,19 @@
 # PromptRegistry (load YAML + Jinja2)
+
 import re
 from pathlib import Path
-
 import yaml
 from jinja2 import Template
-
 from .template import PromptTemplate
 
 
 class PromptRegistry:
     def __init__(self, folder: str):
+        """Load all prompt templates from the specified folder."""
         self._templates = self._load(folder)
 
     def _load(self, folder: str) -> dict[str, PromptTemplate]:
-        # Accept both .yaml and .yml files so the project can use either shape.
+        """Load prompt templates from YAML files in the given folder."""
         templates: dict[str, PromptTemplate] = {}
         root = Path(folder)
         for pattern in ("*.yaml", "*.yml"):
@@ -27,6 +27,7 @@ class PromptRegistry:
 
     @staticmethod
     def _tokenize(text: str) -> set[str]:
+        """Tokenize the text into a set of lowercase words, including Romanian characters."""
         return {
             token.lower()
             for token in re.findall(r"[a-zA-ZăîșțĂÎȘȚ0-9]+", text or "")
@@ -56,5 +57,6 @@ class PromptRegistry:
         return best_name
 
     def render(self, name: str, **variabile) -> str:
+        """Render the selected prompt template with the provided variables."""
         template = self._templates[name]
         return Template(template.prompt).render(**variabile)

@@ -8,6 +8,6 @@ prompt: |
 
   You answer users' questions as follows:
   1. Think step by step.
-  2. Extract the necessary information from the internet.
+  2. Extract the necessary information from the internet using the web search tool.
   3. Build a customized plan based on the information.
   4. Provide a response limited to {{ max_cuvinte }} words.
