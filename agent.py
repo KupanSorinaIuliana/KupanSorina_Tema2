@@ -1,7 +1,6 @@
 # QA agent / orchestrare LLM
 from __future__ import annotations
 import asyncio
-from typing import Any, Iterator
 import httpx
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage, ToolMessage
@@ -88,7 +87,7 @@ class QAAgent:
         self.history = [SystemMessage(content=selected_system_prompt)] + non_system_history
         return self.history + [HumanMessage(content=message)]
         
-    def build_system_prompt(self, message: str, role: str = "avocat", domain: str = "contracte") -> str:
+    def build_system_prompt(self, message: str, role: str = "lawyer", domain: str = "contracts") -> str:
         """Render a task-specific system prompt from the prompt YAML files."""
         prompt_name = self.prompt_registry.select_prompt_name(message)
         render_kwargs = {"role": role, "domain": domain}
@@ -99,30 +98,6 @@ class QAAgent:
             render_kwargs["max_cuvinte"] = 120
 
         return self.prompt_registry.render(prompt_name, **render_kwargs)
-
-    def stream(self, message: str) -> Iterator[str]:
-        """Yield chunks when they arrive from the LLM."""
-        messages = self._build_messages(message)
-        full_response = ""
-        for chunk in self.llm.stream(messages):
-            content = getattr(chunk, "content", "")
-            if isinstance(content, str):
-                full_response += content
-                yield content
-
-        self.history.append(HumanMessage(content=message))
-        self.history.append(AIMessage(content=full_response))
-
-    def get_history(self) -> list[dict[str, Any]]:
-        """Returneaza istoricul serializabil."""
-        return [
-            {"type": msg.type, "content": msg.content}
-            for msg in self.history
-        ]
-
-    def clear_history(self) -> None:
-        """Reset complet al conversatiei."""
-        self.history = [SystemMessage(content=self.system_prompt)]
 
     def is_litellm_running(self) -> None:
         """Check if LiteLLM server is running."""
