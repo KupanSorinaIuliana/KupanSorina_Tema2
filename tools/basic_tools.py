@@ -1,7 +1,6 @@
 from datetime import datetime, timezone
 import ast
 import html
-import operator
 from tools.params_models import CalculatorParams, WebSearchParams, GetDatetimeParams
 from tools.registry import register_tool
 from ddgs import DDGS
@@ -9,12 +8,18 @@ from ddgs import DDGS
 
 @register_tool(
     params_model=WebSearchParams,
-    description="Cauta pe web si returneaza rezultate relevante, cu titlu, URL si descriere.",
+    description=
+    """
+    Search the web and return relevant results with title, URL, and description.
+    Usage examples:
+    "search for the latest news on contract law"
+    "find information about the Eiffel Tower"
+
+    """,
 )
 def web_search(params: WebSearchParams) -> str:
-    """Cauta pe web si returneaza rezultatele relevante ca text."""
     if not params.query or not params.query.strip():
-        return "Eroare: query-ul nu poate fi gol."
+        return "Eroare: the query can not be empty."
 
     with DDGS() as ddgs:
         results = ddgs.text(params.query.strip(), max_results=params.max_results)
@@ -32,11 +37,11 @@ def web_search(params: WebSearchParams) -> str:
     params_model=CalculatorParams,
     description=
     """
-        Evalueaza o expresie matematica.
-        Exemplu de folosire:
+        Evaluate a mathematical expression and return the result.
+        Usage examples:
         "calc 2 + 3 * 4"
-        "calculeaza 10 / 2"
-        "rezolva 5^2 + 3"
+        "calculate 10 / 2"
+        "solve 5^2 + 3"
         " 2 + 3 * (4 - 1) "
     """,
 )
@@ -55,11 +60,12 @@ def calculator(params: CalculatorParams) -> str:
      """
         Get the current local date and time and return it as an an ISO 8601 date time string.
 
-        Exemplu de folosire:
-        "ce data e azi?"
-        "ce zi e azi?"
-        "ce ora e acum?"
-        "time stamp asta"
+        Usage examples:
+        "what is the current date and time?"
+        "what is the current date?"
+        "what day is it today?"
+        "what time is it now?"
+        "time stamp this"
         """,
 )
 def get_datetime(params: GetDatetimeParams) -> str:
