@@ -1,0 +1,125 @@
+Contract de antrepriza template
+
+CONTRACT DE ANTREPRIZĂ
+
+Nr. [numar] din [data_incheiere]
+
+Art. 1. Părțile contractante
+
+Antreprenorul: [antreprenor], cu sediul/domiciliul în [adresaantreprenor], identificat prin [dateidentificare_antreprenor], denumit în continuare „Antreprenorul”.
+
+Beneficiarul: [beneficiar], cu sediul/domiciliul în [adresabeneficiar], identificat prin [dateidentificare_beneficiar], denumit în continuare „Beneficiarul”.
+
+Părțile convin încheierea prezentului contract în următoarele condiții.
+
+Art. 2. Obiectul contractului
+
+Antreprenorul se obligă să execute următoarele lucrări: [obiect_lucrari].
+
+Lucrările se vor desfășura la adresa: [locatie_lucrari].
+
+Descrierea tehnică, cantitățile, materialele, etapele de execuție și termenele, după caz, vor fi stabilite în documentația tehnică, devizul sau anexele contractului.
+
+Art. 3. Durata și termenele de execuție
+
+Data începerii lucrărilor: [data_incepere].
+
+Data estimată a finalizării: [data_finalizare].
+
+Durata estimată a execuției este de [durata_zile] zile calendaristice, sub rezerva condițiilor contractuale privind suspendarea sau prelungirea termenelor.
+
+Modificarea termenelor se face prin acordul părților sau în celelalte situații prevăzute de contract și de lege.
+
+Art. 4. Prețul contractului
+
+Prețul total convenit pentru executarea lucrărilor este de [valoare] RON.
+
+Regimul TVA: [regim_tva].
+
+Prețul include următoarele elemente: [serviciisimateriale_incluse].
+
+Orice lucrări suplimentare sau modificări ale obiectului contractului vor fi convenite în scris de părți, inclusiv în ceea ce privește prețul și termenele.
+
+Art. 5. Modalitatea de plată
+
+Plata se efectuează conform următoarelor condiții: [modalitate_plata].
+
+Părțile pot conveni plata unui avans, plăți intermediare în funcție de stadiul lucrărilor și plata finală după recepție.
+
+Plățile se realizează pe baza documentelor justificative aplicabile, cu respectarea prevederilor fiscale și contractuale.
+
+Art. 6. Obligațiile Antreprenorului
+
+Antreprenorul se obligă:
+
+Să execute lucrările convenite conform contractului și documentației aplicabile.
+Să respecte termenele de execuție stabilite.
+Să utilizeze materiale conforme cu cerințele convenite.
+Să respecte normele aplicabile de securitate și sănătate în muncă.
+Să informeze Beneficiarul despre dificultățile care pot afecta execuția lucrărilor.
+Să remedieze neconformitățile imputabile, în condițiile contractului și ale legii.
+Să predea lucrările executate în vederea recepției.
+Art. 7. Obligațiile Beneficiarului
+
+Beneficiarul se obligă:
+
+Să pună la dispoziție informațiile și documentele necesare executării lucrărilor.
+Să asigure accesul la locul de execuție, în condițiile convenite.
+Să achite prețul conform termenelor și condițiilor stabilite.
+Să verifice lucrările și să participe la recepție.
+Să comunice în timp util observațiile privind execuția lucrărilor.
+Art. 8. Materiale și echipamente
+
+Materialele și echipamentele necesare vor fi asigurate de [partea_responsabila].
+
+Condițiile de aprovizionare, depozitare, utilizare și înlocuire a materialelor neconforme sunt următoarele: [conditii_materiale].
+
+Art. 9. Recepția lucrărilor
+
+La finalizarea lucrărilor, părțile vor proceda la verificarea și recepția acestora, potrivit naturii lucrărilor, documentației aplicabile și legislației în vigoare.
+
+Eventualele neconformități se vor consemna în documentele de recepție, împreună cu măsurile și termenele de remediere, după caz.
+
+Art. 10. Garanția lucrărilor
+
+Condițiile de garanție sunt: [conditii_garantie].
+
+Durata garanției, procedura de notificare și obligațiile de remediere se stabilesc în funcție de natura lucrărilor și de prevederile legale aplicabile.
+
+Art. 11. Răspunderea contractuală
+
+Fiecare parte răspunde pentru neîndeplinirea obligațiilor asumate, în condițiile contractului și ale legii.
+
+Eventualele penalități pentru întârziere sau alte încălcări contractuale sunt: [penalitati].
+
+Art. 12. Încetarea contractului
+
+Contractul poate înceta prin executarea obligațiilor, prin acordul părților sau în alte cazuri prevăzute de contract și de lege.
+
+Condițiile de notificare, remediere a încălcărilor și eventualele consecințe financiare ale încetării sunt: [conditii_incetare].
+
+Art. 13. Litigii
+
+Părțile vor încerca soluționarea amiabilă a neînțelegerilor. În lipsa unei soluții, litigiile vor fi soluționate de instanțele competente potrivit legii.
+
+Art. 14. Dispoziții finale
+
+Anexele, devizele, documentația tehnică și actele adiționale, dacă există, fac parte integrantă din contract.
+
+Contractul se încheie la data de [data_incheiere], în două exemplare sau prin semnare electronică, în condițiile legii.
+
+ANTREPRENOR
+
+Nume/Denumire: [antreprenor]
+
+Reprezentant: [reprezentant_antreprenor]
+
+Semnătură: __________________
+
+BENEFICIAR
+
+Nume/Denumire: [beneficiar]
+
+Reprezentant: [reprezentant_beneficiar]
+
+Semnătură: __________________

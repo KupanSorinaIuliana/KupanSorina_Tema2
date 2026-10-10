@@ -1,10 +1,8 @@
-# QA agent / LLM orchestrator with tool execution and prompt management.
+# Extraction agent for structured data from legal documents, using a conversational LLM with tool execution capabilities.
 from __future__ import annotations
 import asyncio
 import json
 import os
-
-import httpx
 from dotenv import load_dotenv
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage, ToolMessage
@@ -18,7 +16,7 @@ BASE_URL = "http://localhost:4000"
 MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 INITIAL_SYSTEM_PROMPT = (
-    "You are an extraction agent specialized in extracting structured data from legal documents, such as contracts and invoices."
+    "You are an extraction agent specialized in extracting structured data from legal documents, such as contracts and invoices, to a json format."
 )
 
 
@@ -33,7 +31,7 @@ def build_llm() -> BaseChatModel:
         max_output_tokens=1024,
     ).bind_tools(ToolWrapper.catalog())
 
-class QAAgent:
+class JsonAgent:
     """ A conversational agent with history - a wrapper over a ChatModel. """
 
     def __init__(self, llm: BaseChatModel, system_prompt: str, max_iterations: int = 3):
@@ -132,22 +130,13 @@ class QAAgent:
         
     def build_system_prompt(self, message: str, role: str = "lawyer", domain: str = "contracts") -> str:
         """Render a task-specific system prompt from the prompt YAML files."""
-        prompt_name = self.prompt_registry.select_prompt_name(message)
+        prompt_name = "ask_extract"
         render_kwargs = {"role": role, "domain": domain}
-
-        if prompt_name in {"ask_planner", "ask_summary"}:
-            render_kwargs["max_cuvinte"] = 80
-        elif prompt_name == "ask_analyst":
-            render_kwargs["max_cuvinte"] = 120
 
         return self.prompt_registry.render(prompt_name, **render_kwargs)
 
-    def is_litellm_running(self) -> None:
-        """Compatibility no-op kept for older code paths."""
-        return None
-
 async def main():
-    agent = QAAgent(llm=build_llm(), system_prompt=INITIAL_SYSTEM_PROMPT)
+    agent = JsonAgent(llm=build_llm(), system_prompt=INITIAL_SYSTEM_PROMPT)
 
     print("Chat started. Type 'exit' to quit.")
 

@@ -3,8 +3,8 @@ from pathlib import Path
 from queue import Queue
 from threading import Thread
 from pydantic import BaseModel
-from tools.document_schemas import Contract, Invoice
-from tools.extraction_pipeline import ExtractionPipeline
+from tools.extraction_layer.document_schemas import Contract, Invoice
+from tools.extraction_layer.extraction_pipeline import ExtractionPipeline
 
 STOP = None   # sentinel propagat între workeri
 
@@ -33,16 +33,6 @@ def save_json(data: BaseModel, doc_type: str):
         json.dump(data.model_dump(), f, indent=2, ensure_ascii=False)
 
 
-def log_to_db(data: BaseModel, doc_type: str):
-    """Hook opțional pentru persistenta suplimentară."""
-    return None
-
-
-def notify(data: BaseModel, doc_type: str):
-    """Hook opțional pentru notificarile ulterioare."""
-    return None
-
-
 def extract_document(file_path: str, doc_type: str):
     """Extrage un document folosind registry-ul de tipuri."""
     config = EXTRACTION_REGISTRY[doc_type]
@@ -63,8 +53,6 @@ def run_save_pipeline(files_to_process, num_workers: int = 5):
             data, doc_type = item
             try:
                 save_json(data, doc_type)
-                log_to_db(data, doc_type)
-                notify(data, doc_type)
             except Exception as exc:
                 print(f"Worker {worker_id} error: {exc}")
 

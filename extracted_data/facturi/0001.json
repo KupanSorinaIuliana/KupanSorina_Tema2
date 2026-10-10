@@ -1,0 +1,21 @@
+{
+  "numar": "0001",
+  "data_emitarii": "12.09.2026",
+  "data_scadenta": "30.12.2026",
+  "client": "Boldor Razvan",
+  "produse": [
+    {
+      "denumire": "Incheiere contract vanzare/cumparare masina",
+      "cantitate": 1,
+      "pret_unitar": 50.0,
+      "total": 50.0
+    },
+    {
+      "denumire": "Contract de prestari servicii",
+      "cantitate": 3,
+      "pret_unitar": 66.67,
+      "total": 200.0
+    }
+  ],
+  "total_general": 250.0
+}

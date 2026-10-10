@@ -1,0 +1,18 @@
+Factura servicii de avocatura
+Numar: 0008
+
+Date Factura:
+	Data emiterii: 15.08.2025
+	Data scadenta: 20.09.2025
+
+Date Client:
+	Client: Pop Maria
+
+Servici prestate:
+1. Numar: 1
+   Denumire: incheiere contract vanzare/cumparare masina
+   Ore: 1
+   Total: 50 lei
+
+Totaluri:
+	Total: 50 lei

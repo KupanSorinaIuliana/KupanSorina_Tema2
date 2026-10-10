@@ -1,0 +1,96 @@
+CONTRACT DE VÂNZARE-CUMPĂRARE IMOBIL
+
+Nr. [numar] din [data_incheiere]
+
+Art. 1. Părțile contractante
+
+Vânzătorul: [vanzator], cu domiciliul/sediul în [adresavanzator], identificat prin [dateidentificare_vanzator], denumit în continuare „Vânzătorul”.
+
+Cumpărătorul: [cumparator], cu domiciliul/sediul în [adresacumparator], identificat prin [dateidentificare_cumparator], denumit în continuare „Cumpărătorul”.
+
+Părțile declară că au capacitatea legală de a încheia prezentul contract și convin asupra vânzării-cumpărării imobilului descris mai jos.
+
+Art. 2. Obiectul contractului
+
+Vânzătorul vinde, iar Cumpărătorul cumpără imobilul situat în [adresa_imobil], identificat prin următoarele date:
+
+Tipul imobilului: [tip_imobil – apartament, casă, teren etc.]
+Suprafața: [suprafata_mp] metri pătrați.
+Număr cadastral: [numar_cadastral].
+Număr carte funciară: [numarcartefunciara].
+Cota de proprietate transmisă: [cota_proprietate], dacă este cazul.
+
+Datele de identificare ale imobilului se completează conform documentelor cadastrale și de carte funciară.
+
+Art. 3. Dreptul de proprietate
+
+Vânzătorul declară că deține dreptul de proprietate asupra imobilului în baza [actproprietate], încheiat/emis la data de [dataact_proprietate].
+
+Vânzătorul declară că situația juridică a imobilului este cea rezultată din actele de proprietate și documentele de carte funciară prezentate, inclusiv în ceea ce privește eventualele sarcini, ipoteci, litigii sau drepturi ale terților.
+
+Orice declarație privind lipsa sarcinilor trebuie verificată și adaptată situației reale a imobilului.
+
+Art. 4. Prețul vânzării
+
+Prețul total convenit pentru vânzarea imobilului este de [valoare] RON, respectiv [valoareinlitere] lei.
+
+Plata se efectuează prin [modalitate_plata – transfer bancar, credit bancar sau altă modalitate legală], în condițiile convenite de părți.
+
+Situația plății la data autentificării: [plata_efectuata].
+
+Dacă plata este eșalonată sau finanțată prin credit, termenele și condițiile acesteia se vor preciza expres în actul autentic.
+
+Art. 5. Obligațiile Vânzătorului
+
+Vânzătorul se obligă:
+
+Să transmită dreptul de proprietate asupra imobilului în condițiile legii.
+Să prezinte documentele necesare autentificării tranzacției.
+Să furnizeze informații corecte privind situația juridică și materială a imobilului.
+Să declare existența sarcinilor, ipotecilor, litigiilor sau a altor drepturi ale terților, după caz.
+Să predea imobilul Cumpărătorului la data și în condițiile convenite.
+Să respecte celelalte obligații legale și contractuale aplicabile.
+Art. 6. Obligațiile Cumpărătorului
+
+Cumpărătorul se obligă:
+
+Să achite prețul în condițiile convenite.
+Să furnizeze documentele necesare încheierii actului autentic.
+Să preia imobilul la data convenită, în condițiile stabilite de părți.
+Să suporte cheltuielile care îi revin potrivit legii și acordului părților.
+Să respecte celelalte obligații legale și contractuale aplicabile.
+Art. 7. Predarea imobilului
+
+Predarea imobilului se va realiza la data de [data_predare], pe baza documentelor convenite de părți.
+
+La predare se pot consemna starea imobilului, cheile predate, indexurile contoarelor și documentele aferente.
+
+Art. 8. Cheltuieli și taxe
+
+Taxele notariale, impozitele, tarifele de carte funciară și celelalte cheltuieli aferente tranzacției se suportă potrivit legislației aplicabile și înțelegerii părților.
+
+Art. 9. Declarații și garanții
+
+Părțile declară că informațiile furnizate pentru încheierea tranzacției sunt corecte și complete.
+
+Vânzătorul răspunde pentru obligațiile și garanțiile care îi revin potrivit legii, inclusiv cele aplicabile evicțiunii și viciilor, în condițiile legale.
+
+Art. 10. Dispoziții finale
+
+Transferul dreptului de proprietate, formalitățile de autentificare și înscrierea în cartea funciară se realizează potrivit legislației aplicabile.
+
+Prezentul text constituie un model orientativ. Contractul final va fi redactat și autentificat de notarul public competent, pe baza actelor și verificărilor necesare.
+
+VÂNZĂTOR
+
+Nume: [vanzator]
+
+Semnătură: __________________
+
+CUMPĂRĂTOR
+
+Nume: [cumparator]
+
+Semnătură: __________________
+
+Data: [data_incheiere]Contract de vanzare/cumparare imobil template

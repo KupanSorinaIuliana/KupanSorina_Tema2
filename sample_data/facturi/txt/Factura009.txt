@@ -1,0 +1,18 @@
+Factura servicii de avocatura
+Numar: 0009
+
+Date Factura:
+	Data emiterii: 05.08.2025
+	Data scadenta: 02.09.2025
+
+Date Client:
+	Client: Pop Ioana
+
+Servici prestate:
+1. Numar: 1
+   Denumire: incheiere contract reziliere
+   Ore: 1
+   Total: 30 lei
+
+Totaluri:
+	Total: 30 lei

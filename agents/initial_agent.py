@@ -2,24 +2,30 @@
 from __future__ import annotations
 import asyncio
 import json
+import os
 import httpx
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage, ToolMessage
-from langchain_ollama import ChatOllama
-from prompts import PromptRegistry
+from langchain_google_genai import ChatGoogleGenerativeAI
 from tools.tool_wrapper import ToolWrapper
+from prompts import PromptRegistry
 
 BASE_URL = "http://localhost:4000"
-MODEL = "llama3.2"
+MODEL = os.getenv("GEMINI_MODEL")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 INITIAL_SYSTEM_PROMPT = (
     "You are a helpful assistant for a law contract firm. Use tools when needed."
 )
 
 def build_llm() -> BaseChatModel:
-    return ChatOllama(
+    if not GEMINI_API_KEY:
+        raise RuntimeError("GEMINI_API_KEY is not set. Add it to your .env file.")
+
+    return ChatGoogleGenerativeAI(
         model=MODEL,
+        google_api_key=GEMINI_API_KEY,
         temperature=0.7,
-        max_tokens=1024,
+        max_output_tokens=1024,
     ).bind_tools(ToolWrapper.catalog())
 
 class QAAgent:
@@ -131,15 +137,6 @@ class QAAgent:
             render_kwargs["max_cuvinte"] = 120
 
         return self.prompt_registry.render(prompt_name, **render_kwargs)
-
-    def is_litellm_running(self) -> None:
-        """Check if LiteLLM server is running."""
-        try:
-            response = httpx.get(f"{BASE_URL}/health/liveliness", timeout=2.0)
-            if response.status_code == 200:
-                return
-        except Exception:
-            raise RuntimeError("LiteLLM server is not running")
 
 async def main():
     agent = QAAgent(llm=build_llm(), system_prompt=INITIAL_SYSTEM_PROMPT)

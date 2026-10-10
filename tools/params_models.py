@@ -52,3 +52,9 @@ class BatchExtractParams(BaseModel):
         ge=1,
         le=20,
     )
+
+class SearchParams(BaseModel):
+    query: str = Field(
+        description=" Termenii de căutare pentru căutarea documentelor",
+        min_length=2
+    )

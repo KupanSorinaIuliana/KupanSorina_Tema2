@@ -1,0 +1,94 @@
+CONTRACT DE VÂNZARE-CUMPĂRARE AUTOVEHICUL
+
+Nr. [numar] din [data_incheiere]
+
+Art. 1. Părțile contractante
+
+Vânzătorul: [vanzator], domiciliat în [adresavanzator], identificat prin [dateidentificare_vanzator], denumit în continuare „Vânzătorul”.
+
+Cumpărătorul: [cumparator], domiciliat în [adresacumparator], identificat prin [dateidentificare_cumparator], denumit în continuare „Cumpărătorul”.
+
+Părțile convin încheierea prezentului contract în condițiile de mai jos.
+
+Art. 2. Obiectul contractului
+
+Vânzătorul vinde, iar Cumpărătorul cumpără următorul autovehicul:
+
+Marca: [marca]
+Modelul: [model]
+Numărul de înmatriculare: [numar_inmatriculare]
+Numărul de identificare al vehiculului (VIN/serie șasiu): [serie_sasiu]
+Seria motorului, dacă este disponibilă: [serie_motor]
+Anul fabricației: [an_fabricatie]
+Capacitatea cilindrică: [capacitate_cilindrica]
+Combustibil: [combustibil]
+Kilometraj declarat: [kilometraj] km
+Culoare: [culoare]
+Art. 3. Prețul și plata
+
+Prețul total al autovehiculului este de [valoare] RON, respectiv [valoareinlitere] lei.
+
+Plata se efectuează prin [modalitateplata], iar situația plății la data semnării este: [statusplata].
+
+Vânzătorul confirmă primirea prețului numai în măsura în care plata a fost efectiv realizată.
+
+Art. 4. Declarațiile Vânzătorului
+
+Vânzătorul declară că deține dreptul de proprietate asupra autovehiculului și că va furniza documentele necesare pentru transferul proprietății și îndeplinirea formalităților legale.
+
+Situația juridică a autovehiculului, inclusiv eventualele sarcini sau drepturi ale terților, este următoarea: [situatie_juridica].
+
+Starea tehnică declarată a autovehiculului este: [stare_tehnica].
+
+Art. 5. Obligațiile Vânzătorului
+
+Vânzătorul se obligă:
+
+Să transmită dreptul de proprietate asupra autovehiculului, în condițiile legii.
+Să furnizeze documentele necesare efectuării formalităților de înstrăinare.
+Să predea autovehiculul și cheile la data convenită.
+Să comunice informațiile cunoscute privind starea tehnică și situația juridică a mașinii.
+Să îndeplinească formalitățile fiscale care îi revin potrivit legii.
+Art. 6. Obligațiile Cumpărătorului
+
+Cumpărătorul se obligă:
+
+Să achite prețul convenit.
+Să preia autovehiculul și documentele aferente.
+Să îndeplinească formalitățile fiscale și de transcriere a dreptului de proprietate care îi revin.
+Să respecte termenele și obligațiile prevăzute de legislația aplicabilă.
+Art. 7. Predarea autovehiculului
+
+Predarea autovehiculului se realizează la data de [data_predare].
+
+La predare se transmit, după caz:
+
+certificatul de înmatriculare;
+cartea de identitate a vehiculului;
+cheile autovehiculului;
+alte documente convenite de părți.
+Art. 8. Cheltuieli și formalități
+
+Părțile vor îndeplini formalitățile fiscale și de înmatriculare/transcriere prevăzute de legislația în vigoare.
+
+Cheltuielile aferente tranzacției se suportă potrivit legii și înțelegerii părților.
+
+Art. 9. Dispoziții finale
+
+Orice neînțelegere se va soluționa cu prioritate pe cale amiabilă, iar în lipsa unei soluții, de către instanțele competente.
+
+Prezentul contract se semnează de ambele părți, în condițiile legii.
+
+VÂNZĂTOR
+
+Nume: [vanzator]
+
+Semnătură: __________________
+
+CUMPĂRĂTOR
+
+Nume: [cumparator]
+
+Semnătură: __________________
+
+Data: [data_incheiere]Contract de vanzare/cumparare masina template

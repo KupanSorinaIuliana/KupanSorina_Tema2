@@ -1,0 +1,100 @@
+CONTRACT DE PRESTĂRI SERVICII
+
+Nr. [numar] din [data_incheiere]
+
+Art. 1. Părțile contractante
+
+Prestatorul: [prestator], cu sediul/domiciliul în [adresă], identificat prin [CUI/CNP și alte date relevante], denumit în continuare „Prestatorul”.
+
+Beneficiarul: [beneficiar], cu sediul/domiciliul în [adresă], identificat prin [CUI/CNP și alte date relevante], denumit în continuare „Beneficiarul”.
+
+Părțile convin să încheie prezentul contract de prestări servicii, în următoarele condiții.
+
+Art. 2. Obiectul contractului
+
+Prestatorul se obligă să furnizeze Beneficiarului următoarele servicii:
+
+[Descrierea serviciilor care fac obiectul contractului.]
+
+Serviciile vor fi prestate cu respectarea cerințelor și condițiilor convenite de comun acord de către părți.
+
+Art. 3. Durata contractului
+
+Prezentul contract se încheie pentru o perioadă de [durata_luni] luni, începând cu data de [data începerii] și până la data de [data încetării].
+
+Prelungirea contractului se poate realiza prin acordul scris al părților, cu respectarea dispozițiilor legale aplicabile.
+
+Art. 4. Valoarea contractului și plata
+
+Valoarea totală a contractului este de [valoare] RON.
+
+Plata se efectuează în baza facturii emise de Prestator, prin transfer bancar sau printr-o altă modalitate convenită în scris de părți.
+
+Termenul de plată este de [număr] zile calendaristice de la data primirii facturii, dacă părțile nu convin altfel.
+
+Regimul TVA și orice alte obligații fiscale se stabilesc conform legislației aplicabile și statutului fiscal al Prestatorului.
+
+Art. 5. Obligațiile Prestatorului
+
+Prestatorul are următoarele obligații:
+
+Să furnizeze serviciile convenite în condițiile și la termenele stabilite.
+Să respecte cerințele tehnice și profesionale aferente serviciilor.
+Să informeze Beneficiarul despre eventualele întârzieri sau dificultăți care pot afecta executarea contractului.
+Să remedieze, în condițiile convenite de părți, neconformitățile imputabile serviciilor furnizate.
+Să păstreze confidențialitatea informațiilor primite de la Beneficiar, în condițiile contractului și ale legii.
+Să emită documentele de plată prevăzute de legislația aplicabilă.
+Art. 6. Obligațiile Beneficiarului
+
+Beneficiarul are următoarele obligații:
+
+Să furnizeze informațiile și documentele necesare prestării serviciilor.
+Să achite contravaloarea serviciilor în termenul convenit.
+Să verifice serviciile furnizate și să comunice eventualele neconformități într-un termen rezonabil.
+Să coopereze cu Prestatorul pentru îndeplinirea obiectului contractului.
+Art. 7. Răspunderea contractuală
+
+Fiecare parte răspunde pentru neîndeplinirea sau îndeplinirea necorespunzătoare a obligațiilor asumate, în condițiile legii și ale prezentului contract.
+
+Eventualele penalități, dacă sunt convenite, vor fi stabilite astfel: [condiții și cuantum].
+
+Art. 8. Încetarea contractului
+
+Contractul încetează:
+
+La expirarea duratei convenite.
+Prin acordul scris al părților.
+Prin reziliere, în condițiile contractului și ale legii.
+În alte situații prevăzute de legislația aplicabilă.
+
+Condițiile de notificare și eventualul termen de remediere a încălcărilor contractuale sunt: [condiții].
+
+Art. 9. Confidențialitatea
+
+Părțile se obligă să nu divulge informațiile confidențiale obținute în legătură cu executarea contractului, cu excepția cazurilor permise sau impuse de lege.
+
+Art. 10. Litigii
+
+Eventualele neînțelegeri se vor soluționa pe cale amiabilă. În cazul în care soluționarea amiabilă nu este posibilă, litigiile vor fi soluționate de instanțele competente potrivit legii.
+
+Art. 11. Dispoziții finale
+
+Orice modificare a prezentului contract se face prin acordul scris al părților.
+
+Contractul se încheie astăzi, [data_incheiere], în două exemplare, câte unul pentru fiecare parte, sau prin semnare electronică, în condițiile legii.
+
+PRESTATOR
+
+Nume/Denumire: [prestator]
+
+Reprezentant: [dacă este cazul]
+
+Semnătură: __________________
+
+BENEFICIAR
+
+Nume/Denumire: [beneficiar]
+
+Reprezentant: [dacă este cazul]
+
+Semnătură: __________________

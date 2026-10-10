@@ -1,0 +1,80 @@
+Contract de reziliere template
+
+ACORD DE ÎNCETARE / REZILIERE A CONTRACTULUI
+
+Nr. [numar] din [data_incheiere]
+
+Art. 1. Părțile
+
+Prima parte: [parte1], cu sediul/domiciliul în [adresaparte1], identificată prin [dateidentificareparte1], denumită în continuare „Prima parte”.
+
+A doua parte: [parte2], cu sediul/domiciliul în [adresaparte2], identificată prin [dateidentificareparte2], denumită în continuare „A doua parte”.
+
+Părțile convin încheierea prezentului document privind încetarea contractului identificat mai jos.
+
+Art. 2. Contractul vizat
+
+Prezentul acord privește contractul cu următoarele date:
+
+Numărul contractului inițial: [numarcontractinitial]
+Data încheierii contractului inițial: [datacontractinitial]
+Tipul contractului: [tip_contract]
+Obiectul contractului: [obiect_contract]
+Art. 3. Modalitatea și motivul încetării
+
+Părțile convin încetarea contractului prin acordul lor, cu efect de la data de [data_incetare].
+
+Motivul încetării: [motiv_incetare].
+
+Dacă încetarea are loc prin reziliere unilaterală sau în temeiul unei clauze contractuale ori al legii, temeiul și procedura aplicabile se vor preciza în documentul corespunzător situației concrete.
+
+Art. 4. Obligațiile părților
+
+Prima parte se obligă:
+
+Să îndeplinească obligațiile restante care îi revin până la data încetării, conform contractului și legii.
+Să predea documentele sau bunurile datorate, dacă este cazul.
+Să achite sumele restante datorate, dacă există.
+
+A doua parte se obligă:
+
+Să îndeplinească obligațiile restante care îi revin până la data încetării.
+Să restituie bunurile sau documentele primite, dacă este cazul.
+Să achite sau să regularizeze sumele datorate, conform situației financiare convenite.
+Art. 5. Situația financiară
+
+La data încetării, situația obligațiilor financiare este următoarea:
+
+Sume restante: [sume_restante]
+Despăgubiri sau penalități convenite/legal datorate: [despagubiri_penalitati]
+Alte obligații financiare: [alteobligatiifinanciare]
+
+Părțile vor consemna expres dacă mai există obligații neachitate și modalitatea de stingere a acestora.
+
+Art. 6. Efectele încetării
+
+De la data încetării, părțile nu mai execută obligațiile viitoare ale contractului inițial, cu excepția celor care, potrivit acordului sau legii, continuă să producă efecte.
+
+Prezentul document nu reprezintă, prin el însuși, o renunțare la creanțe sau la drepturi deja născute, dacă părțile nu prevăd expres acest lucru în mod valabil.
+
+Art. 7. Dispoziții finale
+
+Orice neînțelegere privind interpretarea sau executarea prezentului acord se va soluționa cu prioritate pe cale amiabilă, iar în lipsa unei soluții, potrivit legii.
+
+Prezentul document se încheie astăzi, [data_incheiere], în două exemplare, câte unul pentru fiecare parte, sau se semnează electronic, în condițiile legii.
+
+PRIMA PARTE
+
+Nume/Denumire: [parte_1]
+
+Reprezentant: [reprezentantparte1]
+
+Semnătură: __________________
+
+A DOUA PARTE
+
+Nume/Denumire: [parte_2]
+
+Reprezentant: [reprezentantparte2]
+
+Semnătură: __________________

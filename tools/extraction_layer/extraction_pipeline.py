@@ -6,7 +6,7 @@ from google import genai
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from pydantic import BaseModel
-from tools.loader import load_document
+from tools.extraction_layer.loader import load_document
 
 
 class ExtractionPipeline:
@@ -79,7 +79,7 @@ class ExtractionPipeline:
             contents=chunk_text,
             config={
                 "response_mime_type": "application/json",
-                "response_schema": schema,
+                "response_json_schema": schema.model_json_schema(),  # Gemini → Pydantic direct
             },
         )
         return self._parse_response_payload(raw_response)

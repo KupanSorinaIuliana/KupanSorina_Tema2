@@ -1,13 +1,13 @@
 from datetime import datetime, timezone
 import ast
 import html
-from tools.extraction_pipeline import ExtractionPipeline
-from tools.params_models import CalculatorParams, ExtractContractParams, WebSearchParams, GetDatetimeParams, ExtractInvoiceParams, BatchExtractParams
+from tools.extraction_layer.extraction_pipeline import ExtractionPipeline
+from tools.params_models import CalculatorParams, ExtractContractParams, WebSearchParams, GetDatetimeParams, ExtractInvoiceParams, BatchExtractParams, SearchParams
 from tools.registry import register_tool
-from tools.document_schemas import Invoice, Contract
-from tools.save_json import save_json, run_save_pipeline
+from tools.extraction_layer.document_schemas import Invoice, Contract
+from tools.extraction_layer.save_json import save_json, run_save_pipeline
 from ddgs import DDGS
-
+from db_layer.rag_service import RAGService
 
 @register_tool(
     params_model=WebSearchParams,
@@ -141,3 +141,26 @@ def batch_extract_documents(params: BatchExtractParams) -> dict:
         }
     except Exception as exc:
         return {"error": f"Procesare batch eșuată: {str(exc)}"}
+
+@register_tool(
+    params_model=SearchParams,
+    description=
+    """
+    Caută documente în funcție de termeni de căutare.
+    Exemple de utilizare:
+    "caută documente cu acest termen"
+    "găsește toate contractele cu acest cuvânt"
+    """,
+)
+def search_documents(params: SearchParams) -> dict:
+    """Caută documente în funcție de termeni de căutare."""
+    try:
+        rag_service = RAGService()
+        results = rag_service.search(params.query)
+        return {
+            "query": params.query,
+            "results": results,
+            "status": "completed",
+        }
+    except Exception as exc:
+        return {"error": f"Căutare eșuată: {str(exc)}"}

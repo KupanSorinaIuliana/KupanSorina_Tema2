@@ -1,0 +1,96 @@
+Contract de imprumut
+
+CONTRACT DE ÎMPRUMUT DE BANI
+
+Nr. [numar] din [data_incheiere]
+
+Art. 1. Părțile contractante
+
+Împrumutătorul: [imprumutator], domiciliat în [adresaimprumutator], identificat prin [dateidentificare_imprumutator], denumit în continuare „Împrumutătorul”.
+
+Împrumutatul: [imprumutat], domiciliat în [adresaimprumutat], identificat prin [dateidentificare_imprumutat], denumit în continuare „Împrumutatul”.
+
+Părțile convin încheierea prezentului contract în următoarele condiții.
+
+Art. 2. Obiectul contractului
+
+Împrumutătorul acordă Împrumutatului un împrumut în valoare de [valoare] RON, sumă pe care Împrumutatul se obligă să o restituie în condițiile stabilite prin prezentul contract.
+
+Suma împrumutată se transmite prin [modalitatepredare: transfer bancar sau numerar], la data de [dataacordare].
+
+Dovada predării sumei se va realiza prin documentele corespunzătoare modalității de plată utilizate.
+
+Art. 3. Durata și termenul de restituire
+
+Împrumutul se acordă începând cu data de [data_acordare].
+
+Împrumutatul se obligă să restituie integral suma împrumutată până la data de [data_restituire].
+
+Părțile pot conveni restituirea integrală la scadență sau în rate, după cum urmează: [grafic_restituire].
+
+Art. 4. Dobânda
+
+Părțile convin următoarele condiții privind dobânda:
+
+Dobândă: [dobanda_procent] % pe an.
+Tipul dobânzii: [fără dobândă / dobândă fixă / altă variantă convenită].
+Modalitatea de calcul și plată: [modalitate_dobanda].
+
+Dacă împrumutul este acordat fără dobândă, acest lucru se va menționa expres.
+
+Orice dobândă și eventuale penalități trebuie stabilite cu respectarea legislației aplicabile.
+
+Art. 5. Obligațiile Împrumutătorului
+
+Împrumutătorul se obligă:
+
+Să pună la dispoziția Împrumutatului suma convenită, în condițiile stabilite.
+Să furnizeze, la cerere, dovada transferului sumei împrumutate.
+Să confirme restituirea sumelor primite, atunci când aceasta are loc.
+Să respecte celelalte obligații prevăzute în contract și de lege.
+Art. 6. Obligațiile Împrumutatului
+
+Împrumutatul se obligă:
+
+Să utilizeze suma împrumutată în condițiile convenite, dacă există o destinație contractuală.
+Să restituie suma împrumutată până la termenul stabilit.
+Să achite dobânda convenită, dacă este cazul.
+Să respecte graficul de rambursare, dacă restituirea se realizează în rate.
+Să comunice Împrumutătorului eventualele situații care afectează executarea obligațiilor, fără ca aceasta să modifice automat termenele contractuale.
+Art. 7. Întârzierea la plată
+
+În cazul întârzierii la restituire, se aplică prevederile contractuale și dispozițiile legale referitoare la obligațiile bănești și dobânda penalizatoare, după caz.
+
+Condițiile concrete privind penalitățile, dacă sunt convenite: [conditii_penalitati].
+
+Art. 8. Rambursarea anticipată
+
+Împrumutatul poate restitui anticipat, integral sau parțial, suma împrumutată, în condițiile convenite de părți și cu respectarea dispozițiilor legale aplicabile.
+
+Art. 9. Încetarea obligațiilor
+
+Obligațiile de restituire se sting prin executarea integrală a sumelor datorate și a celorlalte obligații aferente, potrivit contractului și legii.
+
+Orice modificare a termenelor sau condițiilor de rambursare se consemnează în scris, atunci când legea sau contractul impune această formă.
+
+Art. 10. Soluționarea litigiilor
+
+Eventualele neînțelegeri se vor soluționa pe cale amiabilă. În lipsa unei soluții, litigiile vor fi soluționate de instanțele competente potrivit legii.
+
+Art. 11. Dispoziții finale
+
+Prezentul contract se încheie în două exemplare, câte unul pentru fiecare parte, la data de [data_incheiere].
+
+Părțile declară că au citit și au înțeles clauzele contractului și că își exprimă consimțământul în mod liber.
+
+ÎMPRUMUTĂTOR
+
+Nume: [imprumutator]
+
+Semnătură: __________________
+
+ÎMPRUMUTAT
+
+Nume: [imprumutat]
+
+Semnătură: __________________

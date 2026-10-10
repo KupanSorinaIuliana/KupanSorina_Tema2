@@ -11,7 +11,8 @@ class Product(BaseModel):
 class Invoice(BaseModel):
     """Schemă extracție date factură."""
     numar:  str
-    data:   str
+    data_emitarii:   str
+    data_scadenta:  str
     client: str
     # Listă imbricată — LLM-ul populează automat structura
     produse: List[Product] = Field(default=[])
