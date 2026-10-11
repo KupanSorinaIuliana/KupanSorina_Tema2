@@ -26,7 +26,7 @@ class RAGService:
         top_k: int = 5,
     ) -> list[tuple[DocumentChunk, float]]:
         query_emb = self.model.encode(query, convert_to_numpy=True).tolist()
-        return self.repo.search_with_threshold(query_emb, top_k=top_k)
+        return self.repo.similarity_search(query_emb, top_k=top_k)
 
     def get_context(
         self,

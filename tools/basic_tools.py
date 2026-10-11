@@ -1,6 +1,7 @@
 from datetime import datetime, timezone
 import ast
 import html
+from db_layer.transaction_manager import transaction
 from tools.extraction_layer.extraction_pipeline import ExtractionPipeline
 from tools.params_models import CalculatorParams, ExtractContractParams, WebSearchParams, GetDatetimeParams, ExtractInvoiceParams, BatchExtractParams, SearchParams
 from tools.registry import register_tool
@@ -150,17 +151,20 @@ def batch_extract_documents(params: BatchExtractParams) -> dict:
     Exemple de utilizare:
     "caută documente cu acest termen"
     "găsește toate contractele cu acest cuvânt"
+    "facturi extrase cu acest nume"
     """,
 )
 def search_documents(params: SearchParams) -> dict:
     """Caută documente în funcție de termeni de căutare."""
     try:
-        rag_service = RAGService()
-        results = rag_service.search(params.query)
-        return {
-            "query": params.query,
-            "results": results,
-            "status": "completed",
-        }
+         with transaction() as db:
+            rag_service = RAGService(db)
+            print(f"Searching for: {params.query}")
+            results = rag_service.search(params.query)
+            return {
+                "query": params.query,
+                "results": results,
+                "status": "completed",
+            }
     except Exception as exc:
         return {"error": f"Căutare eșuată: {str(exc)}"}

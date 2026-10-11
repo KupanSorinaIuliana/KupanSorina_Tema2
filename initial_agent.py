@@ -7,15 +7,17 @@ import httpx
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage, ToolMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
-from tools.tool_wrapper import ToolWrapper
 from prompts import PromptRegistry
+from tools.tool_wrapper import ToolWrapper
+
 
 BASE_URL = "http://localhost:4000"
-MODEL = os.getenv("GEMINI_MODEL")
+MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 INITIAL_SYSTEM_PROMPT = (
-    "You are a helpful assistant for a law contract firm. Use tools when needed."
+    "Esti un agent de extracție specializat în extragerea datelor structurate din documente legale, cum ar fi contracte și facturi, într-un format json."
 )
+
 
 def build_llm() -> BaseChatModel:
     if not GEMINI_API_KEY:
@@ -29,7 +31,7 @@ def build_llm() -> BaseChatModel:
     ).bind_tools(ToolWrapper.catalog())
 
 class QAAgent:
-    """ A conversational agent with history - a wrapper over a ChatModel. """
+    """ Un agent conversațional cu istoric - un wrapper peste un ChatModel. """
 
     def __init__(self, llm: BaseChatModel, system_prompt: str, max_iterations: int = 3):
         """Initialize the QAAgent with a chat model, system prompt, and max iterations."""
@@ -38,7 +40,6 @@ class QAAgent:
         self.max_iterations = max_iterations
         self.prompt_registry = PromptRegistry("prompts")
         self.history: list[BaseMessage] = [SystemMessage(content=system_prompt)]
-        self.is_litellm_running()  # Check if LiteLLM server is running
 
     async def chat(self, message: str) -> str:
         """Send a message, receive a complete response, update history."""
@@ -141,15 +142,8 @@ class QAAgent:
 async def main():
     agent = QAAgent(llm=build_llm(), system_prompt=INITIAL_SYSTEM_PROMPT)
 
-    print("Chat started. Type 'exit' to quit.")
-
-    while True:
-        user_msg = input("You: ").strip()
-        if user_msg.lower() in {"exit", "quit"}:
-            break
-
-        reply = await agent.chat(user_msg)
-        print(f"Agent: {reply}")
+    reply = await agent.chat("Foloseste search documents documente pentru facturi si extrage datele contractului de imobil?")
+    print(f"Agent: {reply}")
 
 
 if __name__ == "__main__":

@@ -138,15 +138,8 @@ class JsonAgent:
 async def main():
     agent = JsonAgent(llm=build_llm(), system_prompt=INITIAL_SYSTEM_PROMPT)
 
-    print("Chat started. Type 'exit' to quit.")
-
-    while True:
-        user_msg = input("You: ").strip()
-        if user_msg.lower() in {"exit", "quit"}:
-            break
-
-        reply = await agent.chat(user_msg)
-        print(f"Agent: {reply}")
+    reply = await agent.chat("Extract invoice from sample_data/facturi/txt/factura008.txt")
+    print(f"Agent: {reply}")
 
 
 if __name__ == "__main__":

@@ -61,6 +61,6 @@ class ChunkRepository:
         rows = self.db.execute(stmt).all()
         return [(chunk, float(score)) for chunk, score in rows]
 
-    def search_with_threshold(self, query_embedding: list[float], min_score: float = 0.1, top_k: int = 5, probes: int = 10,) -> list[tuple[DocumentChunk, float]]:
+    def search_with_threshold(self, query_embedding: list[float], min_score: float = 0.4, top_k: int = 5, probes: int = 10,) -> list[tuple[DocumentChunk, float]]:
         results = self.similarity_search(query_embedding, top_k=top_k, probes=probes)
         return [(chunk, score) for chunk, score in results if score >= min_score]

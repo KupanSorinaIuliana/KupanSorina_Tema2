@@ -1,5 +1,4 @@
 # Project overview
-- `agents` - containing all the existing agents
 - `db_layer` - repositories, rag service, models, index creation
 - `extracted_data` - json extracted documents
 - `migrations` - document and document chunk migrations
@@ -8,7 +7,7 @@
 - `tools` - existing tools infrastructure + json extraction helpers
 - `env` - add you gemini api key in here and change the model if needed, same for the database url
 
-## Agents folder
+## Agents
 -` __init__.py`
 - `initial_agent.py` – conversational agent wrapper
 - `json_agent.py` - extractor agent from docx, pdf, and txt files (use files from the sample_data folder) to json files (output in extracted_data folder)
@@ -58,7 +57,7 @@
 - Run the index creation file from the database layer folder:
     python index_creation.py
 - Run the agent (would be good to run the db agent to have some data in the database before testing analyst and intial agents):
-    python -m agents.db_agent
-    python -m agents.json_agent
-    python -m agents.analyst_agent
-    python -m agents.initial_agent
+    python -m agents.db_agent (adauga contracte si facturi din sample_data)
+    python -m agents.json_agent (contracte si facturi din sample_data)
+    python -m agents.analyst_agent (modifica intrebarile in functie de ce ai in db)
+    python -m agents.initial_agent (modifica intrebarile)

@@ -22,7 +22,7 @@ class ToolWrapper:
         try:
             result = tool["func"](params)
             if isinstance(result, (dict, list, tuple, set)):
-                return json.dumps(result, ensure_ascii=False, indent=2)
+                return json.dumps(result, ensure_ascii=False, indent=2, default=str)
             return str(result)
         except Exception as e:
             return f"Eroare execuție '{name}': {e}"
